@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package tutorial;
+
+option java_package = "mwo.psr.proto";
+option java_outer_classname = "GradesRequestProtos";
+
+message Student {
+  string name = 1;
+}
+
+message GradesRequest {
+  Student student = 1;
+  Subject subject = 2;
+}
+
+message GradesResponse {
+  repeated Grade grades = 1;
+}
+
+message Database {
+  map<string, StudentData> data = 1;
+}
+
+message StudentData {
+  map<string, SubjectGrades> subjects = 1;
+}
+
+message SubjectGrades {
+  repeated Grade grades = 1;
+}
+
+enum Subject {
+  JEZYK_POLSKI = 0;
+  MATEMATYKA = 1;
+  BIOLOGIA = 2;
+}
+
+enum Grade {
+  NDST = 0;
+  DST = 1;
+  DB = 2;
+  BDB = 3;
+}
+
