@@ -9,14 +9,14 @@ import java.util.*;
 import mwo.psr.proto.GradesRequestProtos.*;
 
 /**
- * Klasa QuoteServer jest odpowiedzialna za uruchomienie serwera UDP,  który nasłuchuje na żądania od klientów
- * i odpowiada na nie zgodnie z logiką biznesową. W metodzie run, w pętli while serwer odbiera pakiety, parsuje
- * żądanie GradesRequest przesłane przez klienta, odczytuje nazwę studenta i nazwę przedmiotu z żądania. Następnie
- * serwer wywołuje metodę getStudentGradesForSubject, która pobiera oceny studenta dla danego przedmiotu.
- * Oceny są generowane losowo za pomocą metody getRandomGrades. Można dostosować tę logikę i odczytać oceny z
- * prawdziwej bazy danych lub innego źródła. Następnie serwer tworzy odpowiedź GradesResponse zawierającą listę ocen
- * i wysyła ją do klienta poprzez gniazdo DatagramSocket. Odpowiedź jest przesyłana na adres i port, z którego
- * otrzymano żądanie.
+ * Klasa QuoteServer jest odpowiedzialna za uruchomienie serwera UDP,  ktory nasluchuje na zadania od klientow
+ * i odpowiada na nie zgodnie z logika biznesowa. W metodzie run, w petli while serwer odbiera pakiety, parsuje
+ * zadanie GradesRequest przeslane przez klienta, odczytuje nazwe studenta i nazwe przedmiotu z zadania. Nastepnie
+ * serwer wywoluje metode getStudentGradesForSubject, ktora pobiera oceny studenta dla danego przedmiotu.
+ * Oceny sa generowane losowo za pomoca metody getRandomGrades. Mozna dostosowac te logike i odczytac oceny z
+ * prawdziwej bazy danych lub innego zrodla. Nastepnie serwer tworzy odpowiedz GradesResponse zawierajaca liste ocen
+ * i wysyla ja do klienta poprzez gniazdo DatagramSocket. Odpowiedz jest przesylana na adres i port, z ktorego
+ * otrzymano zadanie.
  */
 public class QuoteServer {
     public static void main(String[] args) throws IOException {

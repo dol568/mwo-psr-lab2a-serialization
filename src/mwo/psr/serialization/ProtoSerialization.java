@@ -26,7 +26,7 @@ public class ProtoSerialization {
      * Metoda tworzy obiekt WeatherForcast, serializuje go, zapisuje do pliku, nastepnie odczytuje plik,
      * deserializuje z powrotem do nowego obiektu WeatherForecast i wyswietla zdeserializowane dane w konsoli
      *
-     * @throws IOException Jeœli wyst¹pi b³¹d operacji wejœcia-wyjœcia podczas zapisywania/odczytywania pliku.
+     * @throws IOException Jeœli wystapi blad operacji wejscia-wyjscia podczas zapisywania/odczytywania pliku.
      */
     public void weatherForecast() throws IOException {
 
@@ -86,7 +86,7 @@ public class ProtoSerialization {
             file.write(forecastser);
         }
 
-        // Wczeœniej zapisany plik jest odczytywany za pomoc¹ klasy FileInputStream
+        // Wczesniej zapisany plik jest odczytywany za pomoc¹ klasy FileInputStream
         // Dane sa zdeserializowane do nowego obiektu WeatherForecast
         // a nastepnie wyswietlane w konsoli
         try (FileInputStream input = new FileInputStream(filename)) {
