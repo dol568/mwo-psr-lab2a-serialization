@@ -10,11 +10,11 @@ import java.net.InetAddress;
 import mwo.psr.proto.GradesRequestProtos.*;
 
 /**
- * Ta klasa reprezentuje klienta w komunikacji. Tworzy ona wiadomoœæ GradesRequest z imieniem studenta i przedmiotem,
- * serializuje j¹ do tablicy bajtów, a nastêpnie wysy³a j¹ do serwera za pomoc¹ DatagramSocket przez protokó³ UDP.
- * Nastêpnie oczekuje na otrzymanie pakietu z odpowiedzi¹ od serwera, parsuje odpowiedŸ z powrotem do wiadomoœci
- * GradesResponse i wyœwietla oceny na konsoli. Jeœli odpowiedŸ zawiera oceny, s¹ one wyœwietlane wraz z ich numerem.
- * Jeœli odpowiedŸ nie zawiera ¿adnych ocen, wyœwietlany jest odpowiedni komunikat.
+ * Ta klasa reprezentuje klienta w komunikacji. Tworzy ona wiadomosc GradesRequest z imieniem studenta i przedmiotem,
+ * serializuje ja do tablicy bajtow, a nastepnie wysyla ja do serwera za pomoca DatagramSocket przez protokol UDP.
+ * Nastepnie oczekuje na otrzymanie pakietu z odpowiedzia od serwera, parsuje odpowiedz z powrotem do wiadomosci
+ * GradesResponse i wyswietla oceny na konsoli. Jesli odpowiedz zawiera oceny, sa one wyswietlane wraz z ich numerem.
+ * Jesli odpowiedz nie zawiera zadnych ocen, wyswietlany jest odpowiedni komunikat.
  */
 public class QuoteClient {
     public static void main(String[] args) throws IOException {
